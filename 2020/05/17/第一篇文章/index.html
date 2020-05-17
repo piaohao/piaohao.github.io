@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"piaohao.org","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="mysql时区问题参考：mysql时区问题解决几种方法_数据库_赵英超的博客-CSDN博客 123456set global time_zone &#x3D; &amp;#39;+8:00&amp;#39;;  ##修改mysql全局时区为北京时间，即我们所在的东8区set time_zone &#x3D; &amp;#39;+8:00&amp;#39;;  ##修改当前会话时区flush privileges;">
+  <meta name="description" content="mysql时区问题参考：mysql时区问题解决几种方法_数据库_赵英超的博客-CSDN博客 123456set global time_zone &#x3D; &#39;+8:00&#39;;  ##修改mysql全局时区为北京时间，即我们所在的东8区set time_zone &#x3D; &#39;+8:00&#39;;  ##修改当前会话时区flush privileges;  #立即生效# 增加参数jdbc.url&#x3D;jdbc:mysql:&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一篇文章">
 <meta property="og:url" content="http://piaohao.org/2020/05/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/index.html">
 <meta property="og:site_name" content="piaohao&#39;s blog">
-<meta property="og:description" content="mysql时区问题参考：mysql时区问题解决几种方法_数据库_赵英超的博客-CSDN博客 123456set global time_zone &#x3D; &amp;#39;+8:00&amp;#39;;  ##修改mysql全局时区为北京时间，即我们所在的东8区set time_zone &#x3D; &amp;#39;+8:00&amp;#39;;  ##修改当前会话时区flush privileges;">
+<meta property="og:description" content="mysql时区问题参考：mysql时区问题解决几种方法_数据库_赵英超的博客-CSDN博客 123456set global time_zone &#x3D; &#39;+8:00&#39;;  ##修改mysql全局时区为北京时间，即我们所在的东8区set time_zone &#x3D; &#39;+8:00&#39;;  ##修改当前会话时区flush privileges;  #立即生效# 增加参数jdbc.url&#x3D;jdbc:mysql:&#x2F;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-17T04:07:14.000Z">
-<meta property="article:modified_time" content="2020-05-17T04:09:18.895Z">
+<meta property="article:modified_time" content="2020-05-17T04:36:34.157Z">
 <meta property="article:author" content="piaohao">
 <meta name="twitter:card" content="summary">
 
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-05-17 12:07:14 / Modified: 12:09:18" itemprop="dateCreated datePublished" datetime="2020-05-17T12:07:14+08:00">2020-05-17</time>
+              <time title="Created: 2020-05-17 12:07:14 / Modified: 12:36:34" itemprop="dateCreated datePublished" datetime="2020-05-17T12:07:14+08:00">2020-05-17</time>
             </span>
 
           
@@ -189,7 +189,7 @@
 
       
         <h2 id="mysql时区问题"><a href="#mysql时区问题" class="headerlink" title="mysql时区问题"></a>mysql时区问题</h2><p>参考：<a href="https://blog.csdn.net/ZYC88888/article/details/86597674" target="_blank" rel="noopener">mysql时区问题解决几种方法_数据库_赵英超的博客-CSDN博客</a></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set global time_zone = &amp;#39;+8:00&amp;#39;;  ##修改mysql全局时区为北京时间，即我们所在的东8区</span><br><span class="line">set time_zone = &amp;#39;+8:00&amp;#39;;  ##修改当前会话时区</span><br><span class="line">flush privileges;  #立即生效</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 增加参数</span></span><br><span class="line">jdbc.url=jdbc:mysql://localhost:3306/demo?characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set global time_zone = '+8:00';  ##修改mysql全局时区为北京时间，即我们所在的东8区</span><br><span class="line">set time_zone = '+8:00';  ##修改当前会话时区</span><br><span class="line">flush privileges;  #立即生效</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 增加参数</span></span><br><span class="line">jdbc.url=jdbc:mysql://localhost:3306/demo?characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</span><br></pre></td></tr></table></figure>
 
     </div>
 
